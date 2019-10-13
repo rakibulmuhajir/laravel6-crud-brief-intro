@@ -8,6 +8,7 @@ Laravel 6 CRUD Brief Tutorial
 </li>
   <li>Previous command will create show.php and [timestamp]create_shows_table.php migration file. go to migration file and add table schema in up method like this<br />
     <code>
+      <?php
     public function up()
 {
         Schema::create('shows', function (Blueprint $table) {
@@ -19,6 +20,7 @@ Laravel 6 CRUD Brief Tutorial
             $table->timestamps();
         });
 }
+?>
     </code>
     </li>
   
