@@ -8,9 +8,9 @@ Laravel 6 CRUD Brief Tutorial
 </li>
   <li>Previous command will create show.php and [timestamp]create_shows_table.php migration file. go to migration file and add table schema in up method like this<br />
     <code>
-      <?php
+ 
     public function up()
-{
+    {
         Schema::create('shows', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('show_name');
@@ -19,7 +19,7 @@ Laravel 6 CRUD Brief Tutorial
             $table->string('lead_actor');
             $table->timestamps();
         });
-}
+    }
 
     </code>
     </li>
@@ -30,16 +30,17 @@ Run migration command to add tables to the database
 
 </li>
 <li>Inside app/show.php we add fillable properties. These are the properties which can be mass assigned.<br />
-<?php
+      
+      <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Model;
 
-class Show extends Model
-{
+    class Show extends Model
+    {
     protected $fillable = ['show_name', 'genre', 'imdb_rating', 'lead_actor'];
-}
+    }
 </li>
 <li>
     Now we create a show controller with <code>--resource</code> flag. which will add CRUD methods automatically<br>
@@ -48,15 +49,16 @@ class Show extends Model
     </code> <br>
     Then we go to routes/web.php and add following <br>
     <code>
-<?php
+     
+     <?php
         // ShowController.php
 
-Route::get('/', function () {
+    Route::get('/', function () {
     return view('welcome');
-});
+    });
 
-Route::resource('shows', 'ShowController');
-    </code>
+    Route::resource('shows', 'ShowController');
+   </code>
     </li>
 
 </ol>
