@@ -7,7 +7,7 @@ Laravel 6 CRUD Brief Tutorial
 <code>php artisan make:model show-m</code>
 </li>
   <li>Previous command will create show.php and [timestamp]create_shows_table.php migration file. go to migration file and add table schema in up method like this<br />
-    <code>
+  
  
     public function up()
     {
@@ -48,8 +48,7 @@ Run migration command to add tables to the database
     php artisan make:controller ShowController --resource
     </code> <br>
     Then we go to routes/web.php and add following <br>
-    <code>
-     
+  
      <?php
         // ShowController.php
 
@@ -58,7 +57,7 @@ Run migration command to add tables to the database
     });
 
     Route::resource('shows', 'ShowController');
-   </code>
+   
     </li>
 
 </ol>
