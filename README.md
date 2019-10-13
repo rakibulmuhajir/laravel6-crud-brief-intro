@@ -20,7 +20,7 @@ Laravel 6 CRUD Brief Tutorial
             $table->timestamps();
         });
 }
-?>
+
     </code>
     </li>
   
