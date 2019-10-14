@@ -22,7 +22,7 @@ Laravel 6 CRUD Brief Tutorial
     }
 
     </code>
-    </li>
+  </li>
   
   <li>
 Run migration command to add tables to the database
@@ -58,6 +58,6 @@ Run migration command to add tables to the database
 
     Route::resource('shows', 'ShowController');
    
-    </li>
+   </li>
 
 </ol>
